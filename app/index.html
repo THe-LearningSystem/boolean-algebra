@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="boolean-algebra" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="boolean-algebra" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="boolean-algebra" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="boolean-algebra" class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <title translate="APP.TITLE">Boolesche Algebra</title>
+    <base href="/">
+
+    <meta name="author" content="Sergej Görzen">
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- build:css css/bower.min.css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/flag-icon-css/css/flag-icon.css">
+    <!-- endbuild -->
+
+    <!-- build:css css/fa.min.css -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <!-- endbuild -->
+
+    <!-- build:js js/bower.min.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+
+    <script src="bower_components/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+
+    <script src="bower_components/json-formatter/dist/json-formatter.js"></script>
+
+    <script src="bower_components/extend.js/bin/extend.min.js"></script>
+    <script src="bower_components/EaselJS/lib/easeljs-0.8.2.min.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:css css/style.min.css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.responsive.css">
+    <!-- endbuild -->
+
+    <!-- build:js js/app.min.js -->
+    <script src="js/constants.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/ext.js"></script>
+
+    <script src="js/ColorGenerator.js"></script>
+
+    <script src="js/BoolAlgebra/BADomain.js"></script>
+    <script src="js/BoolAlgebra/BAGroup.js"></script>
+    <script src="js/BoolAlgebra/BANode.js"></script>
+    <script src="js/BoolAlgebra/BATable.js"></script>
+    <script src="js/BoolAlgebra/BAExpression.js"></script>
+
+    <script src="js/Canvas/CanvasInterface.js"></script>
+    <script src="js/Canvas/EaselInterface.js"></script>
+
+    <script src="js/KV/ColorPathMap.js"></script>
+    <script src="js/KV/ColorPathLayer.js"></script>
+
+    <script src="js/KV/KVCell.js"></script>
+    <script src="js/KV/KVRow.js"></script>
+    <script src="js/KV/KVBlock.js"></script>
+    <script src="js/KV/KVDiagram.js"></script>
+    <script src="js/KV/BAKV.js"></script>
+    <script src="js/KV/KVExprCompare.js"></script>
+
+    <script src="js/KV/KVReflectingBlock.js"></script>
+    <script src="js/KV/KVReflectingSearch.js"></script>
+
+    <script src="js/KV/KVReflectingBlockRect.js"></script>
+
+    <script src="js/Circuit/BACircuit.js"></script>
+
+    <script src="js/app.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js js/controllers.min.js -->
+    <script src="js/controllers/BACtrl.js" type="text/javascript"></script>
+    <script src="js/controllers/LangCtrl.js" type="text/javascript"></script>
+    <!-- endbuild -->
+
+    <!-- build:js js/directives.min.js -->
+    <script src="directives/dropmenu/dropmenu.js" type="text/javascript"></script>
+    <script src="directives/ngRepeatFinish.js" type="text/javascript"></script>
+    <script src="directives/boolExpr/boolExpr.js" type="text/javascript"></script>
+    <script src="directives/boolInput/boolInput.js" type="text/javascript"></script>
+    <script src="directives/boolTable/boolTableSelect.js" type="text/javascript"></script>
+    <script src="directives/boolTable/boolTable.js" type="text/javascript"></script>
+    <script src="directives/boolKV/boolKV.js" type="text/javascript"></script>
+    <script src="directives/boolKVBlockInput/boolKVBlockInput.js" type="text/javascript"></script>
+    <script src="directives/boolKVBlockMin/boolKVBlockMin.js" type="text/javascript"></script>
+    <script src="directives/boolCircuit/boolCircuit.js" type="text/javascript"></script>
+    <!-- endbuild -->
+
+    <!-- build:css css/directives.min.css -->
+    <link rel="stylesheet" href="directives/dropmenu/dropmenu.css">
+    <link rel="stylesheet" href="directives/boolInput/boolInput.css">
+    <link rel="stylesheet" href="directives/boolExpr/boolExpr.css">
+    <link rel="stylesheet" href="directives/boolTable/boolTable.css">
+    <link rel="stylesheet" href="directives/boolKV/boolKV.css">
+    <link rel="stylesheet" href="directives/boolKVBlockInput/boolKVBlockInput.css">
+    <link rel="stylesheet" href="directives/boolKVBlockMin/boolKVBlockMin.css">
+    <link rel="stylesheet" href="directives/boolCircuit/boolCircuit.css">
+    <!-- endbuild -->
+</head>
+<body>
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header>
+        <h1 class="diagram-title" translate="APP.TITLE"></h1>
+        <img id="thLogo" src="images/th-koeln-logo.png" alt="TH Köln Logo" />
+    </header>
+    <section id="languageBox" ng-controller="LangCtrl">
+        <div class="container-fluid">
+            <div dropmenu dropmenu-change="changeLang">
+                <ul>
+                    <li value="en_EN"><span class="flag-icon flag-icon-gb"></span> {{"LANG_DROP.ENGLISH" | translate}}</li>
+                    <li value="fr_FR" disabled><span class="flag-icon flag-icon-fr"></span> {{"LANG_DROP.FRANCE" | translate}}</li>
+                    <li value="de_DE" selected><span class="flag-icon flag-icon-de"></span> {{"LANG_DROP.GERMAN" | translate}}</li>
+                    <li value="ru_RU"><span class="flag-icon flag-icon-ru"></span> {{"LANG_DROP.RUSSIAN" | translate}}</li>
+                    <li value="es_ES" disabled><span class="flag-icon flag-icon-es"></span> {{"LANG_DROP.SPANISH" | translate}}</li>
+                    <li value="tr_TR" disabled><span class="flag-icon flag-icon-tr"></span> {{"LANG_DROP.TURKISH" | translate}}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid nopadding" ng-view></section>
+
+    <footer>
+        <div class="container-fluid text-left">
+            <div>Author: Sergej Görzen</div>
+            <div>TH Köln - Campus Gummersbach, Theoretische Informatik, Prof. Dr.-Ing. Martin Eisemann</div>
+            <div><a href="https://github.com/AutoSimDevelopers/boolean-algebra.git" target="_blank">Github.com</a></div>
+        </div>
+    </footer>
+</body>
+</html>

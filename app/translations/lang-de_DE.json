@@ -1,0 +1,48 @@
+{
+    "APP": {
+        "TITLE": "Boolesche Algebra"
+    },
+    "MAIN": {
+        "TITLE": "Boolescher Ausdruck"
+    },
+    "GROUPS": {
+        "TITLE": "Gruppen",
+        "INFO": {
+            "S1": "Es wurden keine Gruppen angelegt.",
+            "BEFORE": "Markieren Sie einen gültigen Bereich im Ausdruck und klicken Sie ",
+            "AFTER": ", um Gruppen anzulegen."
+        }
+    },
+    "TABLE": {
+        "TITLE": "Wahrheitstabelle",
+        "INFO": {
+            "TEXT": "Zum Generieren einer Wahrheitstabelle benötigen Sie einen gültigen Ausdruck!",
+            "BUTTON": "Wahrheitstabelle üben"
+        }
+    },
+    "LANG_DROP": {
+        "GERMAN": "Deutsch",
+        "ENGLISH": "Englisch",
+        "TURKISH": "Türkisch",
+        "RUSSIAN": "Russisch",
+        "SPANISH": "Spanisch",
+        "FRANCE": "Französisch"
+    },
+    "KV": {
+        "TITLE": "KV-Diagramm",
+        "CHECK_RESULT": "Ergebnis überprüfen",
+        "SHOW_RESULT": "Lösung anzeigen",
+        "SOLUTION": "Lösung",
+        "INFO": {
+            "TEXT": "Zum Generieren eines KV-Diagramms benötigen Sie einen gültigen Booleschen Ausdruck!",
+            "BUTTON": "KV-Diagramm üben"
+        },
+        "BLOCKS": {
+            "TITLE": "Blöcke",
+            "NO_BLOCKS": "Hier erscheinen Eingabefelder für die gewählten Farbblocke."
+        },
+        "MIN": {
+            "TITLE": "Minimierter Term"
+        }
+    }
+}

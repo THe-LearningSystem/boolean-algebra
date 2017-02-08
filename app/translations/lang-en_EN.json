@@ -1,0 +1,48 @@
+{
+    "APP": {
+        "TITLE": "Boolean Algebra"
+    },
+    "MAIN": {
+        "TITLE": "Boolean Expression"
+    },
+    "GROUPS": {
+        "TITLE": "Groups",
+        "INFO": {
+            "S1": "There are currently no groups.",
+            "BEFORE": "Select a valid range inside the expression and press ",
+            "AFTER": " to create a new group."
+        }
+    },
+    "TABLE": {
+        "TITLE": "Truth table",
+        "INFO": {
+            "TEXT": "You need a valid expression to generate a truth table!",
+            "BUTTON": "Learn with truth table"
+        }
+    },
+    "LANG_DROP": {
+        "GERMAN": "German",
+        "ENGLISH": "English",
+        "TURKISH": "Turkish",
+        "RUSSIAN": "Russian",
+        "SPANISH": "Spanish",
+        "FRANCE": "France"
+    },
+    "KV": {
+        "TITLE": "KV Diagram",
+        "CHECK_RESULT": "Check result",
+        "SHOW_RESULT": "Show solution",
+        "SOLUTION": "Solution",
+        "INFO": {
+            "TEXT": "You need a valid boolean expression to generate a KV diagram!",
+            "BUTTON": "Practice KV diagram"
+        },
+        "BLOCKS": {
+            "TITLE": "Blocks",
+            "NO_BLOCKS": "Here you can see input fields for selected colored blocks."
+        },
+        "MIN": {
+            "TITLE": "Minimized term"
+        }
+    }
+}
