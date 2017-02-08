@@ -1,4 +1,4 @@
-==============Installation==============
+==============Installation==============__
 1) Open command line
 2) Go to the root of the project
 3) Type: npm install and press enter
