@@ -1,6 +1,7 @@
 /**
  * Created by Sergej on 16.01.2017.
  */
+/* Generator für Farben */
 var ColorGenerator = {
     counter: 0,
     value1: 137,
