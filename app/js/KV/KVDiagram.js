@@ -42,6 +42,7 @@ var KVDiagram = function(expression, canvas){
         return A;
     };
 
+    /* Spiegel das Feld in der horizontalen */
     this.reflectHorizontal = function (Var) {
         if (this.field.length < 1) {
             var newRow = new KVRow();
@@ -64,6 +65,7 @@ var KVDiagram = function(expression, canvas){
             }
         }
     };
+    /* Spiegel das Feld in der vertikalen */
     this.reflectVertical = function(Var) {
         if (this.field.length < 2) {
             var row = this.field[0].clone();
@@ -93,6 +95,7 @@ var KVDiagram = function(expression, canvas){
         return {width: width, height: height};
     };
 
+    /* Verbinde alle Zellen miteinander */
     this.createNetwork = function(){
         var w = this.getWidth();
         var w2 = w - 1;
@@ -122,8 +125,7 @@ var KVDiagram = function(expression, canvas){
             /*console.log("n: " + n + ", r: " + r + ", l: " + l + ", b: " + b + ", t: " + t);*/
         }
     };
-
-
+    /* Erstelle die optische Darstellung der Blöcke */
     this.generateBlocks = function(canvas){
         var h = Math.ceil(V.length / 2);
         var w = V.length - h;
@@ -169,6 +171,7 @@ var KVDiagram = function(expression, canvas){
     };
 
     var allBlocks = [];
+    /* Erstelle KNF und DNF */
     this.minimize = function () {
         var searchAlgo = new KVReflectingSearch();
 

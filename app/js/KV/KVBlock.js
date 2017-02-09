@@ -1,6 +1,7 @@
 /**
  * Created by Sergej on 11.01.2017.
  */
+/* Konstrukt, das lediglich zur Darstellung der Blöcke dient */
 var IBlock = Class.extend(function () {
     this.x = 0;
     this.y = 0;
