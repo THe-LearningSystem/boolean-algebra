@@ -68,11 +68,11 @@
 
                 if (domain) {
                     /* Aktualisere das KV */
-                    domain.refreshKV = function (_expr) {
+                    domain.refreshKV = function () {
                         if (domain.toKV) $timeout.cancel(domain.toKV);
                         domain.toKV = $timeout(function(){
                             $scope.$broadcast('reset');
-                            kv.setExpression(expr = _expr);
+                            kv.setExpression(expr = domain.expression);
                             kv.generateKV();
                             $scope.showSolution = false;
                         },50);

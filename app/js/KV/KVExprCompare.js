@@ -20,6 +20,25 @@ var KVExprCompare = function(expression){
         var thisTable = this.expression.generateTable();
         thisTable.updateView();
 
+        var cDNF = KVExprCompare.isDNF(compare.getText());
+        var tDNF = KVExprCompare.isDNF(this.getText());
+
+        var cTempField = [], tTempField = [];
+        if (tDNF && cDNF) {
+            /* Beide DNF => splitte nach ODER */
+            cTempField = compare.getText().split(SYMBOL_OR);
+            tTempField = this.getText().split(SYMBOL_OR);
+        } else if (!tDNF && !cDNF) {
+            /* Beide KNF => splitte nach UND */
+            cTempField = compare.getText().split(SYMBOL_AND);
+            tTempField = this.getText().split(SYMBOL_AND);
+        } else {
+            /* Einer DNF und einer KNF */
+            return false;
+        }
+        /* Prüfe, ob Anzahl der Operatoren gleich ist */
+        if (cTempField.length != tTempField.length) return false;
+
         /* Prüfe auf Äquivalenz der Tabellen */
         if (compTable.bits.length != thisTable.bits.length) return false;
         var bits = compTable.bits.length > thisTable.bits.length ? compTable.bits : thisTable.bits;
